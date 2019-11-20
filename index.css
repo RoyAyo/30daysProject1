@@ -26,10 +26,6 @@
 	box-sizing: border-box;
 }
 
-.right-top-col{
-
-}
-
 .gn1{
 	display: none;
 }
@@ -46,7 +42,7 @@
 	font-size: 14.8pt;
 	text-shadow: 10px 10px 10px 10px blue;
 	text-align: right;
-	margin-bottom: 2.8rem;
+	margin-bottom: 1rem;
 }
 
 .about{
@@ -83,7 +79,7 @@
 	bottom: 10%;
 	width: 18%;
 	height: 45%;
-	background-image: url("images/20190720_145912.jpg");
+	background-image: url("images/roy.jpg");
 
 }
 .icon-2{
@@ -96,7 +92,7 @@
 	position: fixed;
 	left: 66%;
 	bottom: 12.5%;
-	background-image: url("images/Screenshot_20180312-103425.png");
+	background-image: url("images/tega.jpg");
 }
 
 .icon-about{
@@ -136,6 +132,8 @@
 	bottom: 0;
 	background-color: #FFF;
 	z-index: 2;
+	box-sizing: border-box;
+	padding-top: 1.2rem;
 }
 
 #footer{
@@ -146,12 +144,28 @@
 	bottom: 1.2rem;
 	z-index :3;
 	text-align: right;
-	padding-right: 1.3rem;	
+	padding-right: 1.3rem;
 }
+#noname{
+
+}
+
 .leader{
 	opacity: 0.4;
 	font-size: 8pt;
 	vertical-align: middle;
+}
+.stacks{
+	display: flex;
+}
+.abab{
+	margin-right: 2rem;
+}
+.stack{
+	list-style-type: circle;
+	list-style-position: inside;
+	color: #fff;
+	margin-bottom: 0.4rem;
 }
 
 @media(max-width: 950px){
@@ -181,7 +195,7 @@
 		height: 90%;
 	}
 	.icon-about-1{
-		padding: 5px 30px;
+		padding: 5px 20px;
 		text-align: left;
 		height: 10%;
 	}
@@ -211,5 +225,9 @@
 	#footer{
 		color: #fff;
 		padding-right: 0.3rem;
+		margin-bottom: 0rem;
+	}
+	#noname{
+		padding-top: ;
 	}
 }

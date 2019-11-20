@@ -1,23 +1,22 @@
 const abouts = [
-			"Lorem ipsum0 dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-			"Lorem ipsum1 dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-			"Lorem ipsum2 dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-			"Lorem ipsum3 dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-			
+			"A computer Science student, I love problem solving, through available means but I want to learn to use technology to solve problems. I'm loved and I love People.",
+			"I am a Machine Learning and Data Science throwing in Software Engineering a bit , Love watching football and basketball being a Chelsea and Portland fan, love playing game and coding at times.",
+			"I like learning new things, and trying all I can to help people around me.I like tech a lot and one day I will like to be a very famous and rich software developer.",
+			"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,",
 ];
 
 const names = [
-	"Eilene Oyakhilome","Roy Ayoola","Raji Mustapha","Tega Christopher","Eilene Oyakhilome<span class='leader'>(Team leader)</span>"
+	"Eirene Oyakhilome","Roy Ayoola","Raji Mustapha","Tega Christopher","Eirene Oyakhilome<span class='leader'>(Team leader)</span>"
 ];
 
 const images = [
 	"images/IMG-20191119-WA0019.jpg",
-	"images/20191022_001255.jpg",
+	"images/roy.jpg",
 	"images/IMG-20191119-WA0005.jpg",
-	"images/‪+234 814 572 0875‬ 20180731_214340.jpg"
+	"images/tega.jpg"
 ];
 
-const alias = ["eilene","roy","raji","tega"];
+const alias = ["eirene","roy","raji","tega"];
 
 const icons = Array.from(document.getElementsByClassName('icon'));
 
@@ -25,28 +24,36 @@ const iconName = document.getElementsByClassName('icon-name');
 
 icons.forEach(icon => {
 	icon.addEventListener("click",() => {
-	const name = document.getElementsByClassName('name')[0];
+		const stacks = document.getElementsByClassName('stacks');
 
-	const about = document.getElementsByClassName('about')[0];
+		console.log(stacks)
+		for (let i = 0; i < 4; i++) {
+		 	stacks[i].style.display = "none";
+		 }
+		
+		const name = document.getElementsByClassName('name')[0];
+
+		const about = document.getElementsByClassName('about')[0];
 	
-	const img = document.getElementById('im');
+		const img = document.getElementById('im');
 
 		switch (icon.title){
-			case "eilene":
+			case "eirene":
 				img.style.backgroundImage = "url(" + images[0] + ")"; 
 				img.title = icon.title;
+				stacks[0].style.display = "flex";
 				about.innerHTML = abouts[0];
-				name.innerHTML = names[0];
+				name.innerHTML = names[4];
 				for (let i = 0; i < 3; i++) {
 					icons[i].title = alias[i+1];
 					icons[i].style.backgroundImage = "url(" + images[i+1] + ")";
 					iconName[i].innerHTML = names[i+1];
 				}
-
 				break
 			case "roy":
 				img.style.backgroundImage = "url(" + images[1] + ")"; 
 				img.title = icon.title;
+				stacks[1].style.display = "flex";
 				about.innerHTML = abouts[1];
 				name.innerHTML = names[1];
 				let n = 1;
@@ -59,11 +66,11 @@ icons.forEach(icon => {
 					icons[i].style.backgroundImage = "url(" + images[n] + ")";
 					iconName[i].innerHTML = names[n];
 				}
-				console.log("yeah")
 				break
 			case "raji":
 				img.style.backgroundImage = "url(" + images[2] + ")"; 
 				img.title = icon.title;
+				stacks[2].style.display = "flex";
 				about.innerHTML = abouts[2];
 				name.innerHTML = names[2];
 				let m = 2;
@@ -76,11 +83,11 @@ icons.forEach(icon => {
 					icons[i].style.backgroundImage = "url(" + images[m] + ")";
 					iconName[i].innerHTML = names[m];
 				}
-				console.log("yeah")
 				break
 			case "tega":
 				img.style.backgroundImage = "url(" + images[3] + ")"; 
 				img.title = icon.title;
+				stacks[3].style.display = "flex";
 				about.innerHTML = abouts[3];
 				name.innerHTML = names[3];
 				let l = 3
@@ -93,7 +100,6 @@ icons.forEach(icon => {
 					icons[i].style.backgroundImage = "url(" + images[l] + ")";
 					iconName[i].innerHTML = names[l];
 				}
-				console.log("yeah")
 				break
 		}
 	});
