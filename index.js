@@ -1,6 +1,6 @@
 const abouts = [
 			"A computer Science student, I love problem solving, through available means but I want to learn to use technology to solve problems. I'm loved and I love People.",
-			"I am a Machine Learning and Data Science throwing in Software Engineering a bit , Love watching football and basketball being a Chelsea and Portland fan, love playing game and coding at times.",
+			"I am a Machine Learning and Software Engineer, I Love football and basketball being a Chelsea and Portland fan, playing game and coding at times.",
 			"I like learning new things, and trying all I can to help people around me.I like tech a lot and one day I will like to be a very famous and rich software developer.",
 			"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,",
 ];
